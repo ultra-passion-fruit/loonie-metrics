@@ -1,0 +1,27 @@
+{
+  "name": "loonie-metrics",
+  "version": "1.0.0",
+  "description": "loonier metrics is a webpage that displays macroeconomics data about the Canadian economy.",
+  "homepage": "https://github.com/ultra-passion-fruit/loonie-metrics#readme",
+  "bugs": {
+    "url": "https://github.com/ultra-passion-fruit/loonie-metrics/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ultra-passion-fruit/loonie-metrics.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14",
+    "vite": "^8.0.0"
+  }
+}
