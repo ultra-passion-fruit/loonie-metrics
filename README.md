@@ -22,9 +22,7 @@ selects the first region "Canada" for the first row "All Items". Basically, inde
 
 See `script.js` for code examples.
 
-### Development System Functionality
-
-Running Instruction:
+### Running Instructions
 
 To get Express backend running, call the following:
 `npx nodemon index.js`
@@ -37,6 +35,8 @@ Then, get the client server running with Vite:
 This will start running on `port 5173` usually, unless it's busy. You can kill a leftover session with `npx kill-port ####` where the hashes are the port number. 
 
 Note: It automatically looks for the file called index.html
+
+### Development System Functionality
 
 #### Express Server
 
@@ -52,8 +52,10 @@ In-code changes:
 - [ ] Replace vite proxy code with Express
 
 General things:
-- [ ] CPI All-products (month-to-month / 12-month) *add note about that 12-month
+- [ ] CPI All-products *add note about that 12-month
   - [X] Current CPI 
+  - [X] Month-to-Month Growth
+  - [X] 12-month Growth
 - [ ] GDP
   - [ ] Real GPD
   - [ ] Real GDP per Capita

@@ -10,11 +10,28 @@ const PORT = 3001;
 const STATSCAN_URL = 'https://www150.statcan.gc.ca/t1/wds/rest';
 
 // This is your custom endpoint
-app.post('/api/stats', async (req, res) => {
+app.post('/api/metadata', async (req, res) => {
   try {
     // Forward the exact request body from your frontend to StatsCan
     const response = await axios.post(
       `${STATSCAN_URL}/getCubeMetadata`, 
+      req.body
+    );
+    
+    // Send the data back to your frontend
+    res.json(response.data);
+  } catch (error) {
+    console.error("Proxy Error:", error.message);
+    res.status(500).json({ error: "Failed to fetch data from StatsCan" });
+  }
+});
+
+// This is your custom endpoint
+app.post('/api/cpi', async (req, res) => {
+  try {
+    // Forward the exact request body from your frontend to StatsCan
+    const response = await axios.post(
+      `${STATSCAN_URL}/getDataFromCubePidCoordAndLatestNPeriods`, 
       req.body
     );
     
